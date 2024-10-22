@@ -1,0 +1,18 @@
+
+
+shader.Use()
+
+shader.SetVec4("lightColor", 1.0, 1.0, 1.0, 1.0)
+shader.SetVec3("viewPos", camera.Position)
+
+projection := mgl32.Perspective(mgl32.DegToRad(camera.Zoom), float32(w)/float32(h), 0.1, 100.0)
+view := camera.GetViewMatrix()
+shader.SetMat4("projection", projection)
+shader.SetMat4("view", view)
+
+var modelMat mgl32.Mat4
+modelMat = mgl32.Translate3D(0.0, 0.0, 0)
+modelMat = mgl32.Scale3D(1, 1, 1).Mul4(modelMat)
+shader.SetMat4("model", modelMat)
+
+model.Draw(shader)

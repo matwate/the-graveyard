@@ -1,0 +1,19 @@
+package templates
+
+templ Counter_Htmx() {
+	
+	<div>
+		<button
+			hx-get="/click"
+			hx-trigger="click"
+			hx-target="h1"
+            hx-swap="innerHTML"
+            class="inline-flex items-center justify-center rounded-md text-sm font-medium bg-coolgray text-white shadow hover:bg-coolgray-700"
+		>
+			Increment
+		</button>
+		<h1>
+            0
+        </h1>
+	</div>
+}

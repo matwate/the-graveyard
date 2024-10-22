@@ -1,0 +1,47 @@
+package templates 
+
+templ HomePage(n string) {
+	<!DOCTYPE html>
+	<html>
+		<head>
+			<title>{ n }</title>
+			<script src="https://unpkg.com/htmx.org@1.9.12" integrity="sha384-ujb1lZYygJmzgSwoxRggbCHcjc0rB2XoQrxeTUQyRjrOnlCoYta87iKBWq3EsdM2" crossorigin="anonymous"></script>
+			<script src="//unpkg.com/alpinejs" defer></script>
+			<script src="https://cdn.jsdelivr.net/npm/@unocss/runtime"></script>
+			<script src="https://unpkg.com/hyperscript.org@0.9.12"></script>
+			<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+			
+			<link rel="preconnect" href="https://fonts.googleapis.com"/>
+			<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+			<link rel="stylesheet" href="/static/css/index.css"/>
+			<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet"/>
+		</head>
+		<body class="h-screen w-screen bg-[#130F1E] m-0 p-0">
+			<div class="w-full h-full bg-[#130F1E] m-0 p-0">
+				<div class="w-full h-[85px] bg-[#171225] border-b border-[#27272a] flex flex-row flex-justify-between ">
+					<div class="mx-4 my-4 flex items-center gap-3">
+						<img class="w-[43px] h-[54.25px] align-middle" src="/static/img/Logo.png"/>
+						<span class="font-semibold text-[32px] font-['Outfit'] text-white ">Galactik</span>
+					</div>
+					<div class="flex gap-2 items-center mr-4">
+						@HtmxButton("/link-login", "body", "innerHTML") {
+							@Button("Login", "default", "p-4", "console.log('Login!')")
+						}
+						@Button("Signup", "info", "p-4", "console.log('Signup!')")
+					</div>
+				</div>
+				<div class="w-full h-[939px] left-0 top-[85px] absolute">
+					<div class="w-[138px] h-[57px] left-[278px] top-[661px] absolute  rounded-[15px] border-2 border-[#27272a]">
+						@Button("Login", "default", "p-4", "console.log('Login!')")
+					</div>
+					<div class="w-[138px] h-[57px] left-[121px] top-[661px] absolute  rounded-[15px] border-2 border-[#27272a]">
+						@Button("Signup", "info", "p-4", "console.log('Signup!')")
+					</div>
+					<div class="w-[637px] left-[121px] top-[194px] absolute text-white text-[73px] font-semibold font-['Outfit']">Explore the Galaxy of Programming Knowledge</div>
+					<div class="w-[637px] left-[121px] top-[465px] absolute text-white text-[31px] font-light font-['Outfit']">Welcome to Galactik, where we share insightful blog posts about programming. Join us on a Journey Through the vast universe of coding and discover new horizons of knowledge</div>
+					<img class="w-[512px] h-[512px] left-[968px] top-[261px] absolute" src="/static/img/HomePageDesign.png"/>
+				</div>
+			</div>
+		</body>
+	</html>
+}

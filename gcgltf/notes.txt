@@ -1,0 +1,68 @@
+// My model class (in go)
+/*
+   type Model struct{
+       meshes []Mesh
+       directory string
+       loaded_textures []Texture
+   }
+*/
+// It has these methods:
+// 1. LoadModel that requires the following things from the model.
+/*
+   postprocessing effects Triangulate and FlipUVs
+   needs to load the Scene from the file
+
+   This function then calls the processNode function that recursively processes the nodes of the scene.
+*/
+// 2. ProcessNode that requires the following things from the model.
+/*
+   root node of the scene
+   the scene itself
+
+   then it uses the following things
+
+   1. number of meshes in the model
+   2. the meshes of the scene
+
+   then it calls the processMesh function for each mesh in the scene
+   and then it calls the processNode function for each child of the node
+
+   so 3. the nodes children nodes
+*/
+// 3 ProcessMesh that requires the following things from the model.
+/*
+   1.the mesh to be processed
+   2.the scene
+
+   and it uses the following
+
+   1. the meshes number of vertices
+   2. the meshes vertices, as an array of vertices that have x y z
+
+   3.the meshes normals as an array of vectors (or normals) that have x y z
+
+   4. the meshes texture coordinates as an array of vectors that have x y
+
+   5. the meshes number of indices
+   6. the meshes indices as an array of indices (or faces) that have 3 indices
+
+   7. the meshes materials
+   8. the meshes textures
+
+   and for the textures it calls the loadMaterialTextures function
+
+*/
+// 4. LoadMaterialTextures that requires the following things from the model.
+/*
+   1 the material to be loaded
+   2 the type of texture to be loaded
+   3 the name of the texture to be loaded
+
+   and it uses the following
+
+   1. the material textures
+   2. the material textures number of textures
+   3. the material textures textures
+
+   how do we do this in go?
+*/

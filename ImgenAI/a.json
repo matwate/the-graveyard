@@ -1,0 +1,15 @@
+{
+	"request_id": "R55S3smbeZHlPlRwo4dBhO0X",
+	"inference_status": {
+		"status": "succeeded",
+		"runtime_ms": 4405,
+		"cost": 0.0,
+		"tokens_generated": null,
+		"tokens_input": null
+	},
+	"images": [
+        "<image data encoded in base 64>"
+    ],
+	"nsfw_content_detected": [false],
+	"seed": 8859477980562314
+}

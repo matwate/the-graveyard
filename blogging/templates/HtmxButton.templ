@@ -1,0 +1,16 @@
+package templates
+
+import "fmt"
+
+templ HtmxButton(end, target, swap string) {
+	<button
+		hx-get={fmt.Sprintf("%s", end)}
+        hx-target={fmt.Sprintf("%s", target)}
+        hx-swap={fmt.Sprintf("%s", swap)}
+        class="unbuttonize"
+	>
+		<div class="w-full h-full">
+			{ children... }
+		</div>
+	</button>
+}

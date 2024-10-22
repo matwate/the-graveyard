@@ -1,0 +1,5 @@
+{
+    "cmake.configureSettings": {
+        "CMAKE_TOOOLCHAIN_FILE": "C:/users/mateo/data/programming/repos/vcpkg/scripts/buildsystems/vcpkg.cmake"
+    }
+}

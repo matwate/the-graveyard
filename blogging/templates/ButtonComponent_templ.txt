@@ -1,0 +1,4 @@
+<div x-data class=\"
+\" @click=\"
+\"><span class=\"font-normal text-[25px] font-[&#39;Outfit&#39;] text-white align-baseline\">
+</span></div>

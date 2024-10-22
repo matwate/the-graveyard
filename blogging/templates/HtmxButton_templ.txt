@@ -1,0 +1,5 @@
+<button hx-get=\"
+\" hx-target=\"
+\" hx-swap=\"
+\" class=\"unbuttonize\"><div class=\"w-full h-full\">
+</div></button>

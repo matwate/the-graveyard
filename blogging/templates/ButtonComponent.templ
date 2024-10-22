@@ -1,0 +1,28 @@
+package templates
+
+import (
+	"fmt"
+)
+
+func GetVariantClassName(s string) string {
+	switch s {
+	case "default":
+		return "bg-[#404040] rounded-[15px] border-2 border-[#27272a]"
+	case "info":
+		return "bg-[#0e7490] rounded-[15px] border-2 border-[#27272a]"
+	default:
+		return "bg-[#404040] rounded-[15px] border-2 border-[#27272a]"
+	}
+}
+
+templ Button(t string, variant string, className string, command string) {
+	<div
+		x-data
+		class={ fmt.Sprintf("%s %s flex justify-center items-center  hover:bg-[#090909] transition-ease-in-out transition-duration-200 cursor-pointer", GetVariantClassName(variant), className) }
+		@click={ command }
+	>
+		<span class="font-normal text-[25px] font-['Outfit'] text-white align-baseline">
+			{ t }
+		</span>
+	</div>
+}

@@ -1,0 +1,114 @@
+{
+    "cells": [
+      {
+        "cell_type": "markdown",
+        "source": [
+          "# Example C++ Notebook",
+          "",
+          "This notebook demonstrates various C++ features and how they can be used in our notebook system."
+        ]
+      },
+      {
+        "cell_type": "code",
+        "source": [
+          "// Let's start with a simple Hello World",
+          "std::cout << \"Hello, C++ Notebook!\" << std::endl;"
+        ]
+      },
+      {
+        "cell_type": "markdown",
+        "source": [
+          "## Variables and Basic Operations",
+          "",
+          "Now, let's declare some variables and perform basic operations."
+        ]
+      },
+      {
+        "cell_type": "code",
+        "source": [
+          "int a = 5, b = 10;",
+          "double c = 2.5;",
+          "std::cout << \"a + b = \" << a + b << std::endl;",
+          "std::cout << \"b * c = \" << b * c << std::endl;"
+        ]
+      },
+      {
+        "cell_type": "markdown",
+        "source": [
+          "## Functions",
+          "",
+          "We can define functions in our notebook."
+        ]
+      },
+      {
+        "cell_type": "code",
+        "source": [
+          "int fibonacci(int n) {",
+          "    if (n <= 1) return n;",
+          "    return fibonacci(n-1) + fibonacci(n-2);",
+          "}",
+          "",
+          "std::cout << \"The 10th Fibonacci number is: \" << fibonacci(10) << std::endl;"
+        ]
+      },
+      {
+        "cell_type": "markdown",
+        "source": [
+          "## Using Standard Library",
+          "",
+          "Let's demonstrate the use of some standard library features."
+        ]
+      },
+      {
+        "cell_type": "code",
+        "source": [
+          "std::vector<int> numbers = {5, 2, 8, 1, 9};",
+          "std::sort(numbers.begin(), numbers.end());",
+          "",
+          "std::cout << \"Sorted numbers: \";",
+          "for (int num : numbers) {",
+          "    std::cout << num << \" \";",
+          "}",
+          "std::cout << std::endl;"
+        ]
+      },
+      {
+        "cell_type": "markdown",
+        "source": [
+          "## Error Handling",
+          "",
+          "Let's include a cell with an intentional error to test error handling."
+        ]
+      },
+      {
+        "cell_type": "code",
+        "source": [
+          "// This will cause a compilation error",
+          "int x = \"This is not an integer\";"
+        ]
+      },
+      {
+        "cell_type": "markdown",
+        "source": [
+          "## Final Output",
+          "",
+          "Let's print a final message to conclude our notebook."
+        ]
+      },
+      {
+        "cell_type": "code",
+        "source": [
+          "std::cout << \"Thank you for using the C++ Notebook!\" << std::endl;"
+        ]
+      }
+    ],
+    "metadata": {
+      "kernelspec": {
+        "display_name": "C++",
+        "language": "c++",
+        "name": "gcc"
+      }
+    },
+    "nbformat": 4,
+    "nbformat_minor": 4
+  }
