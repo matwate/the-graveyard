@@ -1,0 +1,13 @@
+GENERATOR:
+  PackageName: rlImGui-go
+  PackageDescription: "Go bindings for rlImGui"
+  PackageLicense: "MIT"
+  Includes: 
+    - rlImGui.h
+PARSER:
+  IncludePaths:
+    - /usr/include
+    - /usr/local/include
+    - .
+  SourcesPaths:
+    - rlImGui.h
