@@ -1,0 +1,75 @@
+[gd_scene load_steps=13 format=3 uid="uid://cttsnemn7r4br"]
+
+[ext_resource type="Script" path="res://Assets/Player/playermanager.gd" id="1_kbkyx"]
+[ext_resource type="Script" path="res://Assets/movement_component.gd" id="2_ed07f"]
+[ext_resource type="Texture2D" uid="uid://y35xtewn8n2o" path="res://Assets/Player/Sprites/idle.png" id="2_kf55f"]
+[ext_resource type="Script" path="res://Assets/Player/label.gd" id="5_8bv1r"]
+[ext_resource type="Script" path="res://Assets/Player/state.gd" id="6_64h5a"]
+[ext_resource type="Script" path="res://Assets/Player/Scripts/idle.gd" id="7_k4e27"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ejn68"]
+size = Vector2(14, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mqp1o"]
+atlas = ExtResource("2_kf55f")
+region = Rect2(0, 0, 160, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2lnvx"]
+atlas = ExtResource("2_kf55f")
+region = Rect2(160, 0, 160, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hyaeq"]
+atlas = ExtResource("2_kf55f")
+region = Rect2(320, 0, 160, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yiktq"]
+atlas = ExtResource("2_kf55f")
+region = Rect2(480, 0, 160, 160)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8cbg3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mqp1o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2lnvx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hyaeq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yiktq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_kbkyx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, 2)
+shape = SubResource("RectangleShape2D_ejn68")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1, -3)
+sprite_frames = SubResource("SpriteFrames_8cbg3")
+frame_progress = 0.512748
+
+[node name="Movement Component" type="Node2D" parent="."]
+script = ExtResource("2_ed07f")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -16.0
+offset_top = -42.0
+offset_right = 22.0
+offset_bottom = -19.0
+script = ExtResource("5_8bv1r")
+
+[node name="stateMachine" type="Node" parent="."]
+script = ExtResource("6_64h5a")
+
+[node name="Idle" type="Node2D" parent="stateMachine"]
+script = ExtResource("7_k4e27")
